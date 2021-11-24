@@ -1,16 +1,7 @@
-function multiplyAll(arr) {
-  let product = 1;
-
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr[i].length; j++) {
-      product *= arr[i][j];
-    }
+function sum(arr, n) {
+  if (n === 0) {
+    return 0;
+  } else {
+    return sum(arr, n - 1) + arr[n - 1];
   }
-  return product;
 }
-
-multiplyAll([
-  [1, 2],
-  [3, 4],
-  [5, 6, 7],
-]);
